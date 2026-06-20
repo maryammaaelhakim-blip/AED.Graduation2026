@@ -1,0 +1,2841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AED Graduation Projects 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+
+:root{
+  --navy:#061123;--navy-2:#0d2546;--navy-3:#14345c;
+  --gold:#c9a84c;--gold-2:#e2c97e;--gold-3:#f5e9c4;
+  --white:#ffffff;--off-white:#fafaf8;--mist:#64748b;
+  --border:rgba(201,168,76,0.22);--border-hover:rgba(201,168,76,0.55);
+  --shadow:0 2px 16px rgba(6,17,35,0.06);--shadow-hover:0 8px 32px rgba(201,168,76,0.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;color:var(--navy);
+  font-family:Inter,Helvetica,Arial,sans-serif;
+  font-size:15px;line-height:1.6;
+  background:
+    repeating-linear-gradient(0deg,rgba(201,168,76,0.04) 0px,rgba(201,168,76,0.04) 1px,transparent 1px,transparent 72px),
+    repeating-linear-gradient(90deg,rgba(201,168,76,0.04) 0px,rgba(201,168,76,0.04) 1px,transparent 1px,transparent 72px),
+    #ffffff;
+}
+body.dark-page{
+  background:
+    repeating-linear-gradient(0deg,rgba(201,168,76,0.06) 0px,rgba(201,168,76,0.06) 1px,transparent 1px,transparent 72px),
+    repeating-linear-gradient(90deg,rgba(201,168,76,0.06) 0px,rgba(201,168,76,0.06) 1px,transparent 1px,transparent 72px),
+    var(--navy);
+}
+a{color:inherit;text-decoration:none;cursor:pointer}
+.site-shell{width:min(1440px,100%);margin:0 auto;padding:0 28px 48px}
+
+/* TOPBAR */
+.topbar{
+  position:sticky;top:0;z-index:10;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:16px 0 18px;border-bottom:1px solid var(--border);
+  background:rgba(255,255,255,0.94);backdrop-filter:blur(20px);
+  transition:background 300ms ease,border-color 300ms ease;
+}
+body.dark-page .topbar{background:rgba(6,17,35,0.94);border-bottom-color:rgba(201,168,76,0.2)}
+body.dark-page .topbar .brand-lockup strong{color:#ffffff}
+body.dark-page .topbar .brand-mark{color:#ffffff;background:transparent}
+body.dark-page .nav-links a{color:rgba(255,255,255,0.8)}
+body.dark-page .nav-links a:hover{color:#ffffff;background:rgba(201,168,76,0.12)}
+.brand-lockup{display:flex;align-items:center;gap:14px;min-width:260px}
+.brand-mark{display:grid;width:52px;height:64px;place-items:center;border:1.5px solid var(--gold);border-radius:26px 26px 8px 8px;color:var(--navy);background:var(--white);font-weight:800;font-size:0.9rem;letter-spacing:0.04em}
+.brand-lockup strong{display:block;font-size:0.9rem;font-weight:700;color:var(--navy)}
+.brand-lockup small{display:block;margin-top:2px;color:var(--mist);font-size:0.75rem;font-weight:400}
+.nav-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}
+.nav-links a,.back-link{min-height:36px;padding:9px 16px;border:1px solid var(--border);border-radius:999px;color:var(--navy-2);font-size:0.82rem;font-weight:600;transition:all 180ms ease;cursor:pointer;background:transparent;display:inline-flex;align-items:center}
+.nav-links a:hover,.back-link:hover{border-color:var(--gold);color:var(--navy);background:rgba(201,168,76,0.07)}
+main{outline:none}
+
+/* ANIMATIONS */
+.reveal{animation:reveal 520ms cubic-bezier(0.22,1,0.36,1) both;animation-delay:var(--delay,0ms)}
+@keyframes reveal{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.kicker{display:inline-block;margin-bottom:14px;color:var(--gold);font-size:0.72rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,0.9fr);gap:40px;min-height:calc(100vh - 120px);padding:clamp(56px,9vw,120px) clamp(20px,5vw,72px);border:1px solid var(--border);border-radius:12px;background:#ffffff;margin-top:28px}
+.hero-bg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 85% 30%,rgba(201,168,76,0.06) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 10% 80%,rgba(201,168,76,0.04) 0%,transparent 50%)}
+.hero-lines{position:absolute;inset:0;pointer-events:none;opacity:0.08;background:repeating-linear-gradient(90deg,transparent 0 44px,rgba(201,168,76,1) 44px 45px),repeating-linear-gradient(0deg,transparent 0 88px,rgba(201,168,76,1) 88px 89px)}
+.hero-copy,.hero-id{position:relative;z-index:1;align-self:center}
+.hero h1{font-size:clamp(2.6rem,6.5vw,6.8rem);line-height:0.92;letter-spacing:-0.02em;color:var(--navy);margin-bottom:20px;font-weight:800}
+.hero-copy>p{color:var(--mist);max-width:480px;font-size:1.05rem}
+.institution-card{border:1px solid var(--border);border-radius:10px;background:#ffffff;padding:28px;display:grid;gap:24px}
+.institution-card h2{font-size:clamp(1.4rem,2.5vw,2rem);line-height:1.1;color:var(--navy);font-weight:700}
+.institution-card dl{display:grid;gap:12px}
+dt{color:var(--gold);font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em}
+dd{color:var(--navy);font-size:0.9rem;margin:3px 0 0}
+
+/* NAV GRID */
+.navigation-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;padding:24px 0 8px}
+.nav-card{position:relative;overflow:hidden;min-height:210px;padding:24px;border:1px solid var(--border);border-radius:10px;background:#ffffff;cursor:pointer;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease}
+.nav-card:hover{transform:translateY(-5px);border-color:var(--gold-2);box-shadow:var(--shadow-hover)}
+.nav-card .num{color:var(--gold);font-weight:800;font-size:0.82rem;letter-spacing:0.06em}
+.nav-card h2{margin:48px 0 8px;font-size:1.2rem;color:var(--navy);font-weight:700}
+.nav-card p{color:var(--mist);font-size:0.85rem;line-height:1.5}
+.nav-card-icon{position:absolute;bottom:20px;right:20px;width:68px;height:68px;border:1px solid var(--border);border-radius:50% 50% 8px 8px;opacity:0.35}
+
+/* PAGE INTRO */
+.page-intro{padding:clamp(48px,8vw,88px) 0 28px}
+.page-intro h1{font-size:clamp(2.2rem,5.5vw,5.2rem);line-height:0.95;letter-spacing:-0.02em;color:var(--navy);font-weight:800;margin-bottom:16px;max-width:900px}
+.page-intro>p{color:var(--mist);max-width:720px;font-size:1rem}
+body.dark-page .page-intro h1{color:#ffffff}
+body.dark-page .page-intro>p{color:rgba(255,255,255,0.55)}
+
+/* CARDS GRID */
+.cards-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding-bottom:16px}
+.id-card{position:relative;overflow:hidden;min-height:440px;padding:18px;border:1px solid var(--border);border-radius:10px;background:#ffffff;cursor:pointer;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease}
+.id-card:hover{transform:translateY(-5px);border-color:var(--gold-2);box-shadow:var(--shadow-hover)}
+body.dark-page .id-card{background:rgba(13,37,70,0.7);border-color:rgba(201,168,76,0.25)}
+body.dark-page .id-card:hover{background:rgba(20,52,92,0.8);border-color:rgba(201,168,76,0.55);box-shadow:0 8px 32px rgba(201,168,76,0.15)}
+body.dark-page .id-card .card-code{color:rgba(255,255,255,0.3)}
+body.dark-page .id-card .card-content h2{color:#ffffff}
+body.dark-page .id-card .card-content .tag-label{color:rgba(255,255,255,0.5)}
+body.dark-page .id-card .card-footer{border-top-color:rgba(201,168,76,0.2)}
+body.dark-page .id-card .card-footer small{color:rgba(255,255,255,0.35)}
+body.dark-page .arch-frame{background:linear-gradient(160deg,rgba(201,168,76,0.12) 0%,rgba(13,37,70,0) 60%),rgba(8,25,50,0.8)}
+body.dark-page .qr{background:rgba(6,17,35,0.5);border-color:rgba(201,168,76,0.25)}
+body.dark-page .qr span{background:rgba(255,255,255,0.08)}
+
+.card-code{color:rgba(6,17,35,0.35);font-size:0.7rem;font-weight:700;letter-spacing:0.06em}
+.portrait{display:grid;place-items:center;margin:24px auto 20px}
+.portrait-large{margin:0}
+.arch-frame{display:grid;width:160px;height:202px;place-items:center;border:1.5px solid var(--gold);border-radius:80px 80px 10px 10px;background:linear-gradient(160deg,rgba(201,168,76,0.08) 0%,rgba(255,255,255,0) 60%),#fafaf8}
+.portrait-large .arch-frame{width:min(260px,100%);height:320px}
+.arch-frame span{color:var(--navy-2);font-size:2rem;font-weight:800}
+body.dark-page .arch-frame span{color:#ffffff}
+.card-content{padding:0 6px}
+.card-content .role-label{margin-bottom:6px;color:var(--gold);font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em}
+.card-content h2{margin-bottom:8px;font-size:1.25rem;color:var(--navy);font-weight:700}
+.card-content .tag-label{color:var(--mist);font-size:0.85rem}
+.card-footer{position:absolute;right:18px;bottom:18px;left:18px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;border-top:1px solid var(--border);padding-top:12px}
+.card-footer small{color:rgba(6,17,35,0.45);font-size:0.75rem}
+.qr{display:grid;grid-template-columns:repeat(5,6px);gap:3px;width:max-content;padding:7px;border:1px solid var(--border);background:#ffffff;border-radius:4px}
+.qr span{width:6px;height:6px;background:rgba(6,17,35,0.08);border-radius:1px}
+.qr .filled{background:var(--gold)}
+
+/* IMAGES */
+.arch-frame.img-frame{padding:0;overflow:hidden}
+.arch-frame.img-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.img-frame{overflow:hidden;background:#fafaf8}
+.img-frame img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* PROJECTS */
+.project-list{display:grid;gap:14px}
+.project-card{display:grid;grid-template-columns:160px minmax(0,1fr) auto;align-items:center;gap:22px;padding:20px;border:1px solid var(--border);border-radius:10px;background:#ffffff;cursor:pointer;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease}
+.project-card:hover{transform:translateY(-3px);border-color:var(--gold-2);box-shadow:var(--shadow-hover)}
+.project-thumb,.project-seal{display:grid;min-height:120px;place-items:center;border:1px solid var(--border);border-radius:8px;background:repeating-linear-gradient(135deg,rgba(201,168,76,0.1) 0 1px,transparent 1px 16px),#fafaf8;overflow:hidden}
+.project-thumb img,.project-seal img{width:100%;height:100%;min-height:120px;object-fit:cover;display:block}
+.project-main h2{margin-bottom:6px;font-size:clamp(1.4rem,2.5vw,2.4rem);color:var(--navy);font-weight:700}
+.project-main>p{color:var(--mist)}
+.meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.meta-row span{padding:6px 12px;border:1px solid var(--border);border-radius:999px;color:var(--navy-2);font-size:0.8rem}
+
+/* DETAIL */
+.detail-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:16px;padding-top:44px}
+.expanded-id,.backside-panel,.document-panel{border:1px solid var(--border);border-radius:10px;background:#ffffff;padding:clamp(22px,4vw,36px)}
+body.dark-page .expanded-id,body.dark-page .backside-panel{background:rgba(13,37,70,0.7);border-color:rgba(201,168,76,0.25)}
+body.dark-page .expanded-header h1{color:#ffffff}
+body.dark-page .expanded-header>div span{color:rgba(255,255,255,0.5)}
+body.dark-page .expanded-header{border-bottom-color:rgba(201,168,76,0.2)}
+body.dark-page .expanded-body h2{color:#ffffff}
+body.dark-page .expanded-body>div>p{color:rgba(255,255,255,0.55)}
+body.dark-page .spec-list dd{color:#ffffff}
+body.dark-page .backside-panel h2{color:#ffffff}
+body.dark-page .backside-panel>p{color:rgba(255,255,255,0.5)}
+body.dark-page .panel-pattern{border-color:rgba(201,168,76,0.2)}
+body.dark-page .back-link{color:rgba(255,255,255,0.7);border-color:rgba(201,168,76,0.3)}
+body.dark-page .back-link:hover{color:#ffffff;border-color:var(--gold);background:rgba(201,168,76,0.1)}
+body.dark-page .meta-row span{color:rgba(255,255,255,0.7);border-color:rgba(201,168,76,0.2)}
+.expanded-header{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;border-bottom:1px solid var(--border);padding-bottom:20px;margin-bottom:0}
+.expanded-header h1,.project-hero h1{margin-bottom:6px;font-size:clamp(2rem,5vw,4.5rem);line-height:0.95;color:var(--navy);font-weight:800}
+.expanded-header>div span{color:var(--mist);font-size:0.9rem}
+.expanded-body{display:grid;grid-template-columns:280px minmax(0,1fr);gap:32px;padding-top:26px}
+.expanded-body h2{font-size:1.3rem;color:var(--navy);font-weight:700;margin-bottom:10px}
+.expanded-body>div>p{color:var(--mist)}
+.spec-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+.backside-panel{position:relative;min-height:400px;overflow:hidden}
+.backside-panel .qr{margin:22px 0;transform:scale(1.3);transform-origin:left top}
+.backside-panel h2{margin-top:66px;color:var(--navy);font-size:1.3rem;font-weight:700}
+.backside-panel>p{color:var(--mist);font-size:0.88rem;margin-top:6px}
+.panel-pattern{position:absolute;inset:auto 18px 18px auto;width:72px;height:72px;border:1px solid var(--border);border-radius:50% 50% 8px 8px;opacity:0.4}
+
+/* PROJECT DETAIL */
+.project-detail{display:grid;gap:16px;padding-top:44px}
+.project-hero{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:24px;align-items:stretch;border:1px solid var(--border);border-radius:10px;padding:clamp(22px,5vw,44px);background:#ffffff}
+.project-seal{gap:16px}
+.project-hero>div>p{color:var(--mist);margin-bottom:0}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gallery-tile{margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#ffffff}
+.gallery-tile .img-frame{min-height:200px;background:linear-gradient(140deg,rgba(201,168,76,0.08),transparent),repeating-linear-gradient(90deg,rgba(201,168,76,0.07) 0 1px,transparent 1px 24px)}
+.gallery-tile .img-frame img{min-height:200px}
+.gallery-tile figcaption{border-top:1px solid var(--border);padding:14px 16px;color:var(--mist);font-size:0.86rem}
+.project-backside{min-height:240px}
+
+/* LINKED CARD + ACTION BUTTON */
+.linked-project-card{display:flex;align-items:center;gap:16px;margin-top:22px;padding:14px;border:1px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color 180ms ease,box-shadow 180ms ease}
+.linked-project-card:hover{border-color:var(--gold-2);box-shadow:var(--shadow-hover)}
+.linked-project-card .portrait{margin:0;width:64px;flex-shrink:0}
+.linked-project-card .portrait .arch-frame{width:64px;height:64px;border-radius:14px}
+.linked-project-card .project-thumb{width:64px;height:64px;min-height:64px;border-radius:14px;flex-shrink:0}
+.linked-project-card h3{font-size:1.05rem;color:var(--navy);font-weight:700}
+.linked-project-card p{color:var(--mist);font-size:0.85rem;margin-top:2px}
+body.dark-page .linked-project-card{border-color:rgba(201,168,76,0.25)}
+body.dark-page .linked-project-card h3{color:#ffffff}
+.action-btn{display:inline-flex;align-items:center;margin-top:14px;padding:11px 22px;border:1px solid var(--gold);border-radius:999px;background:var(--navy);color:#ffffff;font-size:0.85rem;font-weight:700;cursor:pointer;transition:all 180ms ease}
+.action-btn:hover{background:var(--gold);color:var(--navy);box-shadow:var(--shadow-hover)}
+body.dark-page .action-btn{background:var(--gold);color:var(--navy)}
+body.dark-page .action-btn:hover{background:var(--gold-2)}
+
+/* INFO GRID */
+.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.info-block{border:1px solid var(--border);border-radius:10px;background:#ffffff;padding:24px}
+.info-block>p:not(.kicker){color:var(--mist)}
+body.dark-page .info-block{background:rgba(13,37,70,0.7);border-color:rgba(201,168,76,0.25)}
+body.dark-page .info-block>p:not(.kicker){color:rgba(255,255,255,0.6)}
+
+/* DOCUMENT */
+.document-panel{display:grid;gap:22px;max-width:960px}
+body.dark-page .document-panel{background:rgba(13,37,70,0.7);border-color:rgba(201,168,76,0.25)}
+body.dark-page .document-header h2{color:#ffffff}
+body.dark-page .document-header{border-bottom-color:rgba(201,168,76,0.2)}
+body.dark-page .document-panel article h3{color:#ffffff}
+body.dark-page .document-panel article p{color:rgba(255,255,255,0.55)}
+body.dark-page .document-panel article{border-bottom-color:rgba(201,168,76,0.12)}
+body.dark-page .document-panel .qr{background:rgba(6,17,35,0.5);border-color:rgba(201,168,76,0.25)}
+body.dark-page .document-panel .qr span{background:rgba(255,255,255,0.08)}
+body.dark-page dd{color:rgba(255,255,255,0.85)}
+.document-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;border-bottom:1px solid var(--border);padding-bottom:22px}
+.document-header h2{font-size:clamp(1.5rem,3vw,2.2rem);color:var(--navy);font-weight:700}
+.document-panel article{display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px;border-bottom:1px solid rgba(201,168,76,0.15);padding-bottom:22px}
+.document-panel article:last-child{border-bottom:0;padding-bottom:0}
+.document-panel article h3{font-size:0.95rem;color:var(--navy);font-weight:700;line-height:1.4}
+.document-panel article p{color:var(--mist);font-size:0.9rem;line-height:1.7}
+
+/* UNIVERSITY DETAIL */
+.uni-contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+.uni-contact-item{padding:14px 16px;border:1px solid var(--border);border-radius:8px;font-size:0.88rem;color:var(--navy-2)}
+.uni-contact-item span{display:block;color:var(--gold);font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px}
+.uni-social-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.uni-social-link{padding:8px 14px;border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--navy-2);transition:all 180ms ease}
+.uni-social-link:hover{border-color:var(--gold);background:rgba(201,168,76,0.07)}
+body.dark-page .uni-contact-item{color:rgba(255,255,255,0.8);border-color:rgba(201,168,76,0.2)}
+body.dark-page .uni-social-link{color:rgba(255,255,255,0.7);border-color:rgba(201,168,76,0.2)}
+
+@media(max-width:1120px){
+  .navigation-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cards-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hero,.detail-layout,.project-hero{grid-template-columns:1fr}
+}
+@media(max-width:780px){
+  .site-shell{padding:0 16px 40px}
+  .topbar{position:relative;align-items:flex-start;flex-direction:column}
+  .nav-links{justify-content:flex-start}
+  .hero{min-height:auto}
+  .navigation-grid,.cards-grid,.gallery-grid{grid-template-columns:1fr}
+  .project-card{grid-template-columns:1fr}
+  .expanded-body,.spec-list,.document-panel article,.info-grid,.uni-contact-grid{grid-template-columns:1fr}
+  .portrait-large .arch-frame{width:200px;height:260px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;transition-duration:1ms!important}}
+
+
+/* STUDENT CONTACT STRIP */
+.contact-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.contact-item{flex:1;min-width:180px;padding:14px 16px;border:1px solid var(--border);border-radius:8px;background:var(--off-white)}
+.contact-label{display:block;color:var(--gold);font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px}
+.contact-value{color:var(--navy-2);font-size:0.88rem;font-weight:500;text-decoration:none;transition:color 150ms ease}
+.contact-value:hover{color:var(--gold)}
+body.dark-page .contact-item{background:rgba(8,25,50,0.6);border-color:rgba(201,168,76,0.2)}
+body.dark-page .contact-value{color:rgba(255,255,255,0.8)}
+body.dark-page .contact-value:hover{color:var(--gold-2)}
+
+</style>
+</head>
+<body>
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  AED SHOWCASE — EDITABLE CONTENT BLOCKS                    ║
+     ║                                                            ║
+     ║  All website content lives in the <template> sections      ║
+     ║  below. Edit any block independently. The JS engine        ║
+     ║  reads these at runtime and builds the full site.          ║
+     ║                                                            ║
+     ║  BLOCK INDEX:                                              ║
+     ║    1. site-identity   — university / program names         ║
+     ║    2. university-info — full university document           ║
+     ║    3. all-students    — 31 student blocks (name · code ·   ║
+     ║                      email · phone · project · photo)     ║
+     ║    4. all-projects    — 31 project blocks                  ║
+     ║    5. all-professors  — professor blocks                   ║
+     ║    6. all-assistants  — teaching assistant blocks          ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SITE IDENTITY  —  Edit university / program details here
+     ══════════════════════════════════════════════════════════ -->
+<template id="site-identity">
+  <data id="site-university-name">Helwan National University</data>
+  <data id="site-faculty-name">Faculty of Engineering</data>
+  <data id="site-program-name">Architecture &amp; Environmental Design Program</data>
+  <data id="site-cohort">Graduation Projects 2026</data>
+  <data id="site-code">HNU-AED-2026</data>
+</template>
+
+<!-- ═══════════════════════════════════════════════════════════
+     UNIVERSITY INFORMATION  —  Edit each field independently
+     ══════════════════════════════════════════════════════════ -->
+<template id="university-info">
+
+  <!-- University name shown in the document header -->
+  <div id="uni-name">
+    <data class="field-label">University Name</data>
+    <h2>Helwan National University</h2>
+  </div>
+
+  <!-- Faculty name -->
+  <div id="uni-faculty">
+    <data class="field-label">Faculty Name</data>
+    <p>Faculty of Engineering</p>
+  </div>
+
+  <!-- Program name -->
+  <div id="uni-program">
+    <data class="field-label">Program Name</data>
+    <p>Architecture &amp; Environmental Design Program</p>
+  </div>
+
+  <!-- Program description -->
+  <div id="uni-program-desc">
+    <data class="field-label">Program Description</data>
+    <p>AED combines architectural design, environmental systems, representation, and research-based studio culture into one coherent academic pathway.</p>
+  </div>
+
+  <!-- Faculty description -->
+  <div id="uni-faculty-desc">
+    <data class="field-label">Faculty Description</data>
+    <p>The faculty frames engineering and design education as disciplined, civic, and technically rigorous, preparing graduates to work across complex built-environment challenges.</p>
+  </div>
+
+  <!-- University description -->
+  <div id="uni-about">
+    <data class="field-label">University Description</data>
+    <p>A national university identity shaped around applied knowledge, professional formation, and academic programs connected to Egypt's evolving urban and industrial context.</p>
+  </div>
+
+  <!-- Contact information -->
+  <div id="uni-contact">
+    <data class="field-label">Contact Information</data>
+    <data class="contact-email">info@hnu.edu.eg</data>
+    <data class="contact-phone">+20 2 0000 0000</data>
+    <data class="contact-address">Helwan, Cairo, Egypt</data>
+  </div>
+
+  <!-- Social media links -->
+  <div id="uni-social">
+    <data class="field-label">Social Media Links</data>
+    <data class="social-website">https://www.hnu.edu.eg</data>
+    <data class="social-facebook">https://facebook.com/hnu.official</data>
+    <data class="social-instagram">https://instagram.com/hnu.aed</data>
+    <data class="social-linkedin">https://linkedin.com/school/helwan-national-university</data>
+  </div>
+
+</template>
+
+<!-- ═══════════════════════════════════════════════════════════
+     STUDENTS  —  31 individually editable student blocks.
+     Each block is fully self-contained.
+     To update any student, find their block by id (student-N)
+     and change only the fields inside that block.
+
+     FIELD GUIDE
+     ───────────
+     class="student-photo"        → img src  (photo path)
+     class="student-name"         → h3       (full name)
+     class="student-code"         → p        (university ID)
+     class="student-email"        → p        (email address)
+     class="student-phone"        → p        (phone number)
+     class="student-project-name" → p        (linked project label)
+     data-project-id              → attr     (routing to project page)
+     ══════════════════════════════════════════════════════════ -->
+<template id="all-students">
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 1  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-1"
+       data-id="1"
+       data-project-id="1">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images\Ahmed Ashraf.jpeg"
+         alt="Student 1">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Ahmed Ashraf Sayed Abdel-Salam</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220002</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">ahmed66ashraf2004@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201144529801</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 1</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 2  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-2"
+       data-id="2"
+       data-project-id="2">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images\Ahmed Rabie.jpg"
+         alt="Student 2">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Ahmed Rabie Mohamed Alsaify</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220004</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">ahmedalsaify75@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201554552900</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 2</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 3  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-3"
+       data-id="3"
+       data-project-id="3">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images\Ahmed Hany.jpeg"
+         alt="Student 3">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Ahmed Hany Mohamed Hassan</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220006</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">ahmed.hany.nehal2003@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201122361011</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 3</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 4  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-4"
+       data-id="4"
+       data-project-id="4">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images\Amalya Ehab.jpg"
+         alt="Student 4">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Amalya Ehab Roshdy Elia</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220008</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">Amalyaehab@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201227881016</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 4</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 5  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-5"
+       data-id="5"
+       data-project-id="5">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images\Ethar Mohammed.jpeg"
+         alt="Student 5">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Ethar Mohamed Fathy Mohamed</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220009</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">etharfathy1@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201066051291</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 5</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 6  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-6"
+       data-id="6"
+       data-project-id="6">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images\Aya Ahmed.jpg"
+         alt="Student 6">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Aya Ahmed Mahmoud Amin</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220010</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">rashwana045@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+20 100 000 006</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 6</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 7  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-7"
+       data-id="7"
+       data-project-id="7">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Pavly bahgat.jpg"
+         alt="Student 7">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Pavly bahgat Ragy Thabet</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220011</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">Bavlybahgat0@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201554603280</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 7</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 8  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-8"
+       data-id="8"
+       data-project-id="8">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Jolie Wessam.PNG"
+         alt="Student 8">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Jolie Wessam Wahba Moussa</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220013</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">joliewessam445@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201276434529</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 8</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 9  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-9"
+       data-id="9"
+       data-project-id="9">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Khadiga khaled.jpg"
+         alt="Student 9">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Khadiga khaled saber Atwa </h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220015</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">khokhayaqoup@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201027086785</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 9</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 10  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-10"
+       data-id="10"
+       data-project-id="10">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Salma Reda.jpg"
+         alt="Student 10">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Salma Reda Abdel-Moneim Mahmoud</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220017</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">Salmareda8402@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201061759235</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 10</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 11  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-11"
+       data-id="11"
+       data-project-id="11">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Seif Amr.jpg"
+         alt="Student 11">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Saif Amr Aly Mohamedy</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code"> 923220018</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">Saifhashad3400@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201008085016</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 11</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 12  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-12"
+       data-id="12"
+       data-project-id="12">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Aly El-din Hussien.jpg"
+         alt="Student 12">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Aly El-din Hussien Aly Abdel-Aziz</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220028</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">alymobarak22@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201014712383</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 12</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 13  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-13"
+       data-id="13"
+       data-project-id="13">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Ali Waheed.jpg"
+         alt="Student 13">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Ali Waheed Ahmed Elsayed</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220030</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">aliwahed2005@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201060315167</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 13</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 14  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-14"
+       data-id="14"
+       data-project-id="14">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Fares Omar.png"
+         alt="Student 14">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Fares Omar Mohamed Abdullah </h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220037</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">ofares1234@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201061420306</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 14</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 15  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-15"
+       data-id="15"
+       data-project-id="15">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Kareem Vector.jpg"
+         alt="Student 15">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Kareem Victor Abdel-Malak Moawad</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220038</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">kareemvictor64@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201127763924</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 15</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 16  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-16"
+       data-id="16"
+       data-project-id="16">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Logina waleed.png"
+         alt="Student 16">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Logina waleed Mahmoud Mohamed</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220040</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">Logyw3842@gmail.com </p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201124400461</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 16</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 17  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-17"
+       data-id="17"
+       data-project-id="17">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Maya Mohamed.jpeg"
+         alt="Student 17">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Maya Mohamed Ali Ahmed</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220041</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">mayasalama707@yahoo.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201141231017</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 17</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 18  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-18"
+       data-id="18"
+       data-project-id="18">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Mohamed Khalid.jpeg"
+         alt="Student 18">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Mohamed Khalid Mohamed Ibrahim</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220044</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">mohamedaboshanab711@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201016802867</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 18</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 19  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-19"
+       data-id="19"
+       data-project-id="19">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Mohamed Adel.jpg"
+         alt="Student 19">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Mohamed Adel Helmy Tuhamy</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220045</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">mohamedadelhelmy2027@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201227689300</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 19</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 20  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-20"
+       data-id="20"
+       data-project-id="20">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Mohamed Mahmoud.jpg"
+         alt="Student 20">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Mohamed Mahmoud Mohamed Ali</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220047</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">Mmahmoud200099@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201018339017</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 20</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 21  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-21"
+       data-id="21"
+       data-project-id="21">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Mahmoud Khalifa.jpg"
+         alt="Student 21">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Mahmoud Khalifa Mahmoud Ahmed</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220050</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">alkhalifadesign44@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+20 100 000 021</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 21</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 22  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-22"
+       data-id="22"
+       data-project-id="22">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Mahmoud Tarek.jpg"
+         alt="Student 22">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Mahmoud Tarek Mohamoud Abdel-samad</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220051</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">.................</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">.................</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 22</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 23  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-23"
+       data-id="23"
+       data-project-id="23">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Mariam Mohamed.jpg"
+         alt="Student 23">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Mariam Mohamed Ahmed Sayed</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220053</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">mariemshowman@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201096734422</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 23</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 24  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-24"
+       data-id="24"
+       data-project-id="24">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Mostafa Osama.png"
+         alt="Student 24">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Mostafa Osama Mostafa Soliman</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220054</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">mo3269484@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201064042822</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 24</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 25  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-25"
+       data-id="25"
+       data-project-id="25">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Mostafa Mohamed.jpg"
+         alt="Student 25">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Mostafa Mohamed Saeed Mohamed</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220055</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">m155851mostafa@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201110390952</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 25</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 26  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-26"
+       data-id="26"
+       data-project-id="26">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Nadine Hany.jpeg"
+         alt="Student 26">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Nadien Hanie Mostafa Ali</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220058</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">nadeenhany49@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+2801110904700</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 26</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 27  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-27"
+       data-id="27"
+       data-project-id="27">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Holy Hany.jpg"
+         alt="Student 27">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Holy Hany Mahrous Hanna</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code"> 923220060</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">holynawar@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201223308687</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 27</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 28  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-28"
+       data-id="28"
+       data-project-id="28">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Yara Yasser.jpg"
+         alt="Student 28">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Yara Yasser Lotfy Hassan</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220061</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">y61yara@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201009736750</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 28</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 29  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-29"
+       data-id="29"
+       data-project-id="29">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Youssef Taher.jpg"
+         alt="Student 29">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Youssef Taher Bayoumi Youssef </h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220064</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">Yousseftaher.u12@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201149308986</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 29</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 30  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-30"
+       data-id="30"
+       data-project-id="30">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Youssef Abdel-Tawab.jpg"
+         alt="Student 30">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Youssef Abdel-Tawab Mostafa Abdel-Tawab</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220062</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">youssefabdo493@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201022644630</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 30</p>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STUDENT 31  —  Edit any field below independently.
+       Fields: photo · name · code · email · phone · project-name
+       ═══════════════════════════════════════════════════════ -->
+  <div id="student-31"
+       data-id="31"
+       data-project-id="31">
+
+    <!-- ① PHOTO  —  Replace the src path with the real image -->
+    <img class="student-photo"
+         src="images/Youssef Mohamed.jpeg"
+         alt="Student 31">
+
+    <!-- ② NAME -->
+    <h3 class="student-name">Youssef Mohamed Kamal Adawi</h3>
+
+    <!-- ③ STUDENT CODE  (University ID) -->
+    <p class="student-code">923220063</p>
+
+    <!-- ④ EMAIL -->
+    <p class="student-email">youssefmmd44@gmail.com</p>
+
+    <!-- ⑤ PHONE -->
+    <p class="student-phone">+201066494286</p>
+
+    <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
+    <p class="student-project-name">Project 31</p>
+
+  </div>
+
+</template>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PROJECTS  —  Edit each project block independently.
+     Each block has:
+       · title          · thumbnail
+       · description    · supervisor
+       · 3 gallery images (add more <img class="gallery-img"> as needed)
+     ══════════════════════════════════════════════════════════ -->
+<template id="all-projects">
+
+  <!-- ──────────────────────────────────────────── Project 1 -->
+  <div id="project-1"
+       data-id="1"
+       data-student-id="1">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-1-cover.jpg"
+          alt="Project 1">
+
+    <!-- TITLE -->
+    <h3>Project 1</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 1.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-1-image-01.jpg" alt="Project 1 — Image 1">
+      <img src="/images/projects/project-1-image-02.jpg" alt="Project 1 — Image 2">
+      <img src="/images/projects/project-1-image-03.jpg" alt="Project 1 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 2 -->
+  <div id="project-2"
+       data-id="2"
+       data-student-id="2">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-2-cover.jpg"
+          alt="Project 2">
+
+    <!-- TITLE -->
+    <h3>Project 2</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 2.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-2-image-01.jpg" alt="Project 2 — Image 1">
+      <img src="/images/projects/project-2-image-02.jpg" alt="Project 2 — Image 2">
+      <img src="/images/projects/project-2-image-03.jpg" alt="Project 2 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 3 -->
+  <div id="project-3"
+       data-id="3"
+       data-student-id="3">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-3-cover.jpg"
+          alt="Project 3">
+
+    <!-- TITLE -->
+    <h3>Project 3</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 3.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-3-image-01.jpg" alt="Project 3 — Image 1">
+      <img src="/images/projects/project-3-image-02.jpg" alt="Project 3 — Image 2">
+      <img src="/images/projects/project-3-image-03.jpg" alt="Project 3 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 4 -->
+  <div id="project-4"
+       data-id="4"
+       data-student-id="4">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-4-cover.jpg"
+          alt="Project 4">
+
+    <!-- TITLE -->
+    <h3>Project 4</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 4.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-4-image-01.jpg" alt="Project 4 — Image 1">
+      <img src="/images/projects/project-4-image-02.jpg" alt="Project 4 — Image 2">
+      <img src="/images/projects/project-4-image-03.jpg" alt="Project 4 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 5 -->
+  <div id="project-5"
+       data-id="5"
+       data-student-id="5">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-5-cover.jpg"
+          alt="Project 5">
+
+    <!-- TITLE -->
+    <h3>Project 5</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 5.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-5-image-01.jpg" alt="Project 5 — Image 1">
+      <img src="/images/projects/project-5-image-02.jpg" alt="Project 5 — Image 2">
+      <img src="/images/projects/project-5-image-03.jpg" alt="Project 5 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 6 -->
+  <div id="project-6"
+       data-id="6"
+       data-student-id="6">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-6-cover.jpg"
+          alt="Project 6">
+
+    <!-- TITLE -->
+    <h3>Project 6</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 6.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-6-image-01.jpg" alt="Project 6 — Image 1">
+      <img src="/images/projects/project-6-image-02.jpg" alt="Project 6 — Image 2">
+      <img src="/images/projects/project-6-image-03.jpg" alt="Project 6 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 7 -->
+  <div id="project-7"
+       data-id="7"
+       data-student-id="7">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-7-cover.jpg"
+          alt="Project 7">
+
+    <!-- TITLE -->
+    <h3>Project 7</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 7.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-7-image-01.jpg" alt="Project 7 — Image 1">
+      <img src="/images/projects/project-7-image-02.jpg" alt="Project 7 — Image 2">
+      <img src="/images/projects/project-7-image-03.jpg" alt="Project 7 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 8 -->
+  <div id="project-8"
+       data-id="8"
+       data-student-id="8">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-8-cover.jpg"
+          alt="Project 8">
+
+    <!-- TITLE -->
+    <h3>Project 8</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 8.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-8-image-01.jpg" alt="Project 8 — Image 1">
+      <img src="/images/projects/project-8-image-02.jpg" alt="Project 8 — Image 2">
+      <img src="/images/projects/project-8-image-03.jpg" alt="Project 8 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 9 -->
+  <div id="project-9"
+       data-id="9"
+       data-student-id="9">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-9-cover.jpg"
+          alt="Project 9">
+
+    <!-- TITLE -->
+    <h3>Project 9</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 9.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-9-image-01.jpg" alt="Project 9 — Image 1">
+      <img src="/images/projects/project-9-image-02.jpg" alt="Project 9 — Image 2">
+      <img src="/images/projects/project-9-image-03.jpg" alt="Project 9 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 10 -->
+  <div id="project-10"
+       data-id="10"
+       data-student-id="10">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-10-cover.jpg"
+          alt="Project 10">
+
+    <!-- TITLE -->
+    <h3>Project 10</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 10.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-10-image-01.jpg" alt="Project 10 — Image 1">
+      <img src="/images/projects/project-10-image-02.jpg" alt="Project 10 — Image 2">
+      <img src="/images/projects/project-10-image-03.jpg" alt="Project 10 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 11 -->
+  <div id="project-11"
+       data-id="11"
+       data-student-id="11">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-11-cover.jpg"
+          alt="Project 11">
+
+    <!-- TITLE -->
+    <h3>Project 11</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 11.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-11-image-01.jpg" alt="Project 11 — Image 1">
+      <img src="/images/projects/project-11-image-02.jpg" alt="Project 11 — Image 2">
+      <img src="/images/projects/project-11-image-03.jpg" alt="Project 11 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 12 -->
+  <div id="project-12"
+       data-id="12"
+       data-student-id="12">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-12-cover.jpg"
+          alt="Project 12">
+
+    <!-- TITLE -->
+    <h3>Project 12</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 12.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-12-image-01.jpg" alt="Project 12 — Image 1">
+      <img src="/images/projects/project-12-image-02.jpg" alt="Project 12 — Image 2">
+      <img src="/images/projects/project-12-image-03.jpg" alt="Project 12 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 13 -->
+  <div id="project-13"
+       data-id="13"
+       data-student-id="13">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-13-cover.jpg"
+          alt="Project 13">
+
+    <!-- TITLE -->
+    <h3>Project 13</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 13.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-13-image-01.jpg" alt="Project 13 — Image 1">
+      <img src="/images/projects/project-13-image-02.jpg" alt="Project 13 — Image 2">
+      <img src="/images/projects/project-13-image-03.jpg" alt="Project 13 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 14 -->
+  <div id="project-14"
+       data-id="14"
+       data-student-id="14">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-14-cover.jpg"
+          alt="Project 14">
+
+    <!-- TITLE -->
+    <h3>Project 14</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 14.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-14-image-01.jpg" alt="Project 14 — Image 1">
+      <img src="/images/projects/project-14-image-02.jpg" alt="Project 14 — Image 2">
+      <img src="/images/projects/project-14-image-03.jpg" alt="Project 14 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 15 -->
+  <div id="project-15"
+       data-id="15"
+       data-student-id="15">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-15-cover.jpg"
+          alt="Project 15">
+
+    <!-- TITLE -->
+    <h3>Project 15</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 15.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-15-image-01.jpg" alt="Project 15 — Image 1">
+      <img src="/images/projects/project-15-image-02.jpg" alt="Project 15 — Image 2">
+      <img src="/images/projects/project-15-image-03.jpg" alt="Project 15 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 16 -->
+  <div id="project-16"
+       data-id="16"
+       data-student-id="16">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-16-cover.jpg"
+          alt="Project 16">
+
+    <!-- TITLE -->
+    <h3>Project 16</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 16.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-16-image-01.jpg" alt="Project 16 — Image 1">
+      <img src="/images/projects/project-16-image-02.jpg" alt="Project 16 — Image 2">
+      <img src="/images/projects/project-16-image-03.jpg" alt="Project 16 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 17 -->
+  <div id="project-17"
+       data-id="17"
+       data-student-id="17">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-17-cover.jpg"
+          alt="Project 17">
+
+    <!-- TITLE -->
+    <h3>Project 17</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 17.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-17-image-01.jpg" alt="Project 17 — Image 1">
+      <img src="/images/projects/project-17-image-02.jpg" alt="Project 17 — Image 2">
+      <img src="/images/projects/project-17-image-03.jpg" alt="Project 17 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 18 -->
+  <div id="project-18"
+       data-id="18"
+       data-student-id="18">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-18-cover.jpg"
+          alt="Project 18">
+
+    <!-- TITLE -->
+    <h3>Project 18</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 18.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-18-image-01.jpg" alt="Project 18 — Image 1">
+      <img src="/images/projects/project-18-image-02.jpg" alt="Project 18 — Image 2">
+      <img src="/images/projects/project-18-image-03.jpg" alt="Project 18 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 19 -->
+  <div id="project-19"
+       data-id="19"
+       data-student-id="19">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-19-cover.jpg"
+          alt="Project 19">
+
+    <!-- TITLE -->
+    <h3>Project 19</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 19.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-19-image-01.jpg" alt="Project 19 — Image 1">
+      <img src="/images/projects/project-19-image-02.jpg" alt="Project 19 — Image 2">
+      <img src="/images/projects/project-19-image-03.jpg" alt="Project 19 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 20 -->
+  <div id="project-20"
+       data-id="20"
+       data-student-id="20">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-20-cover.jpg"
+          alt="Project 20">
+
+    <!-- TITLE -->
+    <h3>Project 20</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 20.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-20-image-01.jpg" alt="Project 20 — Image 1">
+      <img src="/images/projects/project-20-image-02.jpg" alt="Project 20 — Image 2">
+      <img src="/images/projects/project-20-image-03.jpg" alt="Project 20 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 21 -->
+  <div id="project-21"
+       data-id="21"
+       data-student-id="21">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-21-cover.jpg"
+          alt="Project 21">
+
+    <!-- TITLE -->
+    <h3>Project 21</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 21.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-21-image-01.jpg" alt="Project 21 — Image 1">
+      <img src="/images/projects/project-21-image-02.jpg" alt="Project 21 — Image 2">
+      <img src="/images/projects/project-21-image-03.jpg" alt="Project 21 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 22 -->
+  <div id="project-22"
+       data-id="22"
+       data-student-id="22">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-22-cover.jpg"
+          alt="Project 22">
+
+    <!-- TITLE -->
+    <h3>Project 22</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 22.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-22-image-01.jpg" alt="Project 22 — Image 1">
+      <img src="/images/projects/project-22-image-02.jpg" alt="Project 22 — Image 2">
+      <img src="/images/projects/project-22-image-03.jpg" alt="Project 22 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 23 -->
+  <div id="project-23"
+       data-id="23"
+       data-student-id="23">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-23-cover.jpg"
+          alt="Project 23">
+
+    <!-- TITLE -->
+    <h3>Project 23</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 23.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-23-image-01.jpg" alt="Project 23 — Image 1">
+      <img src="/images/projects/project-23-image-02.jpg" alt="Project 23 — Image 2">
+      <img src="/images/projects/project-23-image-03.jpg" alt="Project 23 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 24 -->
+  <div id="project-24"
+       data-id="24"
+       data-student-id="24">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-24-cover.jpg"
+          alt="Project 24">
+
+    <!-- TITLE -->
+    <h3>Project 24</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 24.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-24-image-01.jpg" alt="Project 24 — Image 1">
+      <img src="/images/projects/project-24-image-02.jpg" alt="Project 24 — Image 2">
+      <img src="/images/projects/project-24-image-03.jpg" alt="Project 24 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 25 -->
+  <div id="project-25"
+       data-id="25"
+       data-student-id="25">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-25-cover.jpg"
+          alt="Project 25">
+
+    <!-- TITLE -->
+    <h3>Project 25</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 25.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-25-image-01.jpg" alt="Project 25 — Image 1">
+      <img src="/images/projects/project-25-image-02.jpg" alt="Project 25 — Image 2">
+      <img src="/images/projects/project-25-image-03.jpg" alt="Project 25 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 26 -->
+  <div id="project-26"
+       data-id="26"
+       data-student-id="26">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-26-cover.jpg"
+          alt="Project 26">
+
+    <!-- TITLE -->
+    <h3>Project 26</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 26.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-26-image-01.jpg" alt="Project 26 — Image 1">
+      <img src="/images/projects/project-26-image-02.jpg" alt="Project 26 — Image 2">
+      <img src="/images/projects/project-26-image-03.jpg" alt="Project 26 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 27 -->
+  <div id="project-27"
+       data-id="27"
+       data-student-id="27">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-27-cover.jpg"
+          alt="Project 27">
+
+    <!-- TITLE -->
+    <h3>Project 27</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 27.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-27-image-01.jpg" alt="Project 27 — Image 1">
+      <img src="/images/projects/project-27-image-02.jpg" alt="Project 27 — Image 2">
+      <img src="/images/projects/project-27-image-03.jpg" alt="Project 27 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 28 -->
+  <div id="project-28"
+       data-id="28"
+       data-student-id="28">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-28-cover.jpg"
+          alt="Project 28">
+
+    <!-- TITLE -->
+    <h3>Project 28</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 28.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-28-image-01.jpg" alt="Project 28 — Image 1">
+      <img src="/images/projects/project-28-image-02.jpg" alt="Project 28 — Image 2">
+      <img src="/images/projects/project-28-image-03.jpg" alt="Project 28 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 29 -->
+  <div id="project-29"
+       data-id="29"
+       data-student-id="29">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-29-cover.jpg"
+          alt="Project 29">
+
+    <!-- TITLE -->
+    <h3>Project 29</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 29.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-29-image-01.jpg" alt="Project 29 — Image 1">
+      <img src="/images/projects/project-29-image-02.jpg" alt="Project 29 — Image 2">
+      <img src="/images/projects/project-29-image-03.jpg" alt="Project 29 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 30 -->
+  <div id="project-30"
+       data-id="30"
+       data-student-id="30">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-30-cover.jpg"
+          alt="Project 30">
+
+    <!-- TITLE -->
+    <h3>Project 30</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 30.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-30-image-01.jpg" alt="Project 30 — Image 1">
+      <img src="/images/projects/project-30-image-02.jpg" alt="Project 30 — Image 2">
+      <img src="/images/projects/project-30-image-03.jpg" alt="Project 30 — Image 3">
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────── Project 31 -->
+  <div id="project-31"
+       data-id="31"
+       data-student-id="31">
+
+    <!-- THUMBNAIL (cover image shown on listing cards) -->
+    <img  class="project-thumbnail"
+          src="/images/projects/project-31-cover.jpg"
+          alt="Project 31">
+
+    <!-- TITLE -->
+    <h3>Project 31</h3>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 31.</p>
+
+    <!-- SUPERVISOR -->
+    <p class="project-supervisor">Faculty Supervisor</p>
+
+    <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
+    <div class="project-gallery">
+      <img src="/images/projects/project-31-image-01.jpg" alt="Project 31 — Image 1">
+      <img src="/images/projects/project-31-image-02.jpg" alt="Project 31 — Image 2">
+      <img src="/images/projects/project-31-image-03.jpg" alt="Project 31 — Image 3">
+    </div>
+
+  </div>
+
+</template>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PROFESSORS  —  Edit each professor block independently.
+     ══════════════════════════════════════════════════════════ -->
+<template id="all-professors">
+
+  <!-- ──────────────────────────────────────── Professor 1 -->
+  <div id="professor-1"
+       data-id="prof-amal-rashad">
+
+    <!-- PHOTO -->
+    <img  src="/images/professors/professor-1.jpg"
+          alt="Prof. Amal Rashad">
+
+    <!-- NAME -->
+    <h3>Prof. Amal Rashad</h3>
+
+    <!-- TITLE / ROLE -->
+    <p class="professor-title">Program Chair</p>
+
+    <!-- SPECIALISATION TAG -->
+    <p class="professor-tag">Architectural Design</p>
+
+    <!-- EMAIL -->
+    <p class="professor-email">amal.rashad@hnu.edu.eg</p>
+
+    <!-- BIO -->
+    <p class="professor-bio">Leads AED's academic identity, design studio structure, and graduation review framework.</p>
+
+  </div>
+
+  <!-- ──────────────────────────────────────── Professor 2 -->
+  <div id="professor-2"
+       data-id="prof-hatem-fouad">
+
+    <img  src="/images/professors/professor-2.jpg"
+          alt="Prof. Hatem Fouad">
+    <h3>Prof. Hatem Fouad</h3>
+    <p class="professor-title">Graduation Studio Lead</p>
+    <p class="professor-tag">Urban Design</p>
+    <p class="professor-email">hatem.fouad@hnu.edu.eg</p>
+    <p class="professor-bio">Supervises urban transformation studios with emphasis on civic value, density, and public space performance.</p>
+
+  </div>
+
+  <!-- ──────────────────────────────────────── Professor 3 -->
+  <div id="professor-3"
+       data-id="prof-nadia-elmasry">
+
+    <img  src="/images/professors/professor-3.jpg"
+          alt="Prof. Nadia Elmasry">
+    <h3>Prof. Nadia Elmasry</h3>
+    <p class="professor-title">Environmental Systems Advisor</p>
+    <p class="professor-tag">Sustainable Design</p>
+    <p class="professor-email">nadia.elmasry@hnu.edu.eg</p>
+    <p class="professor-bio">Guides environmental analysis, passive strategies, and measurable architectural performance.</p>
+
+  </div>
+
+</template>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TEACHING ASSISTANTS  —  Edit each TA block independently.
+     ══════════════════════════════════════════════════════════ -->
+<template id="all-assistants">
+
+  <!-- ──────────────────────────────────────── TA 1 -->
+  <div id="ta-1"
+       data-id="ta-farida-samy">
+
+    <!-- PHOTO -->
+    <img  src="images/Samira Sayed.jpeg"
+          alt="Farida Samy">
+
+    <!-- NAME -->
+    <h3>Samira Sayed El-Nagar</h3>
+
+    <!-- TITLE -->
+    <p class="ta-title">Teaching Assistant</p>
+
+    <!-- EMAIL -->
+    <p class="ta-email">samirasayedelnagar@gmail.com </p>
+
+
+  </div>
+
+  <!-- ──────────────────────────────────────── TA 2 -->
+  <div id="ta-2"
+       data-id="ta-karim-nabil">
+
+    <img  src="images/Radwa Hassan.jpeg"
+          alt="Karim Nabil">
+    <h3>Radwa Hassan Mohamed</h3>
+    <p class="ta-title">Teaching Assistant</p>
+    <p class="ta-email">radwa21hassan@gmail.com </p>
+
+  </div>
+
+  <!-- ──────────────────────────────────────── TA 3 -->
+  <div id="ta-3"
+       data-id="ta-salma-younis">
+
+    <img  src="images/Nourhan Tarek.jpeg"
+          alt="Nourhan Tarek Saeed">
+    <h3>Nourhan Tarek Saeed</h3>
+    <p class="ta-title">Teaching Assistant</p>
+    <p class="ta-email">arch.nourhan.tarek.saeeed@gmail.com</p>
+  </div>
+
+</template>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SHELL (do not edit — layout only)
+     ══════════════════════════════════════════════════════════ -->
+<div class="site-shell">
+  <header class="topbar">
+    <a class="brand-lockup" onclick="navigate('/')">
+      <span class="brand-mark">AED</span>
+      <span>
+        <strong>Helwan National University</strong>
+        <small>Architecture &amp; Environmental Design</small>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a onclick="navigate('/students')">Students</a>
+      <a onclick="navigate('/professors')">Professors</a>
+      <a onclick="navigate('/assistants')">TAs</a>
+      <a onclick="navigate('/projects')">Projects</a>
+      <a onclick="navigate('/university')">University</a>
+    </nav>
+  </header>
+  <main id="app" tabindex="-1"></main>
+</div>
+
+<script>
+
+/* ============================================================
+   DATA LOADER
+   Reads all content from the <template> blocks in the HTML
+   and builds the runtime data objects from them.
+   To edit any content: change the HTML <template> blocks above.
+   ============================================================ */
+
+function readTemplate(templateId) {
+  return document.getElementById(templateId).content;
+}
+
+/* ── Site identity ── */
+function loadIdentity() {
+  const t = readTemplate('site-identity');
+  return {
+    university : t.getElementById('site-university-name').textContent.trim(),
+    faculty    : t.getElementById('site-faculty-name').textContent.trim(),
+    program    : t.getElementById('site-program-name').textContent.trim(),
+    cohort     : t.getElementById('site-cohort').textContent.trim(),
+    code       : t.getElementById('site-code').textContent.trim(),
+  };
+}
+
+/* ── University info ── */
+function loadUniversityInfo() {
+  const t = readTemplate('university-info');
+  function txt(id) {
+    const el = t.getElementById(id);
+    return el ? el.querySelector('p,h2') ? el.querySelector('p,h2').textContent.trim() : '' : '';
+  }
+  function dataVal(id, cls) {
+    const el = t.getElementById(id);
+    return el ? el.querySelector('.' + cls)?.textContent.trim() || '' : '';
+  }
+  function allDataVals(id, cls) {
+    const el = t.getElementById(id);
+    if (!el) return [];
+    return [...el.querySelectorAll('.' + cls)].map(d => d.textContent.trim());
+  }
+  const contactEl = t.getElementById('uni-contact');
+  const socialEl  = t.getElementById('uni-social');
+  return {
+    name        : txt('uni-name'),
+    faculty     : txt('uni-faculty'),
+    program     : txt('uni-program'),
+    programDesc : txt('uni-program-desc'),
+    facultyDesc : txt('uni-faculty-desc'),
+    about       : txt('uni-about'),
+    contact : contactEl ? {
+      email   : contactEl.querySelector('.contact-email')?.textContent.trim()   || '',
+      phone   : contactEl.querySelector('.contact-phone')?.textContent.trim()   || '',
+      address : contactEl.querySelector('.contact-address')?.textContent.trim() || '',
+    } : {},
+    social : socialEl ? {
+      website   : socialEl.querySelector('.social-website')?.textContent.trim()   || '',
+      facebook  : socialEl.querySelector('.social-facebook')?.textContent.trim()  || '',
+      instagram : socialEl.querySelector('.social-instagram')?.textContent.trim() || '',
+      linkedin  : socialEl.querySelector('.social-linkedin')?.textContent.trim()  || '',
+    } : {},
+  };
+}
+
+/* ── Students ── */
+function loadStudents() {
+  const t = readTemplate('all-students');
+  return [...t.querySelectorAll('[id^="student-"]')].map(el => ({
+    id          : parseInt(el.dataset.id),
+    projectId   : parseInt(el.dataset.projectId),
+    photo       : el.querySelector('.student-photo')?.getAttribute('src')      || '',
+    name        : el.querySelector('.student-name')?.textContent.trim()        || '',
+    code        : el.querySelector('.student-code')?.textContent.trim()        || '',
+    email       : el.querySelector('.student-email')?.textContent.trim()       || '',
+    phone       : el.querySelector('.student-phone')?.textContent.trim()       || '',
+    projectName : el.querySelector('.student-project-name')?.textContent.trim()|| '',
+  }));
+}
+
+/* ── Projects ── */
+function loadProjects() {
+  const t = readTemplate('all-projects');
+  return [...t.querySelectorAll('[id^="project-"]')].map(el => ({
+    id          : parseInt(el.dataset.id),
+    studentId   : parseInt(el.dataset.studentId),
+    title       : el.querySelector('h3').textContent.trim(),
+    thumbnail   : el.querySelector('.project-thumbnail').getAttribute('src'),
+    description : el.querySelector('.project-description')?.textContent.trim() || '',
+    supervisor  : el.querySelector('.project-supervisor')?.textContent.trim()  || '',
+    images      : [...el.querySelectorAll('.project-gallery img')].map(i => i.getAttribute('src')),
+  }));
+}
+
+/* ── Professors ── */
+function loadProfessors() {
+  const t = readTemplate('all-professors');
+  return [...t.querySelectorAll('[id^="professor-"]')].map(el => ({
+    id      : el.dataset.id,
+    name    : el.querySelector('h3').textContent.trim(),
+    photo   : el.querySelector('img').getAttribute('src'),
+    title   : el.querySelector('.professor-title')?.textContent.trim()  || '',
+    tag     : el.querySelector('.professor-tag')?.textContent.trim()    || '',
+    email   : el.querySelector('.professor-email')?.textContent.trim()  || '',
+    bio     : el.querySelector('.professor-bio')?.textContent.trim()    || '',
+    role    : 'Professor',
+    portrait: el.querySelector('h3').textContent.trim().split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase(),
+  }));
+}
+
+/* ── Teaching Assistants ── */
+function loadAssistants() {
+  const t = readTemplate('all-assistants');
+  return [...t.querySelectorAll('[id^="ta-"]')].map(el => ({
+    id      : el.dataset.id,
+    name    : el.querySelector('h3').textContent.trim(),
+    photo   : el.querySelector('img').getAttribute('src'),
+    title   : el.querySelector('.ta-title')?.textContent.trim()  || '',
+    tag     : el.querySelector('.ta-tag')?.textContent.trim()    || '',
+    email   : el.querySelector('.ta-email')?.textContent.trim()  || '',
+    bio     : el.querySelector('.ta-bio')?.textContent.trim()    || '',
+    role    : 'Teaching Assistant',
+    portrait: el.querySelector('h3').textContent.trim().split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase(),
+  }));
+}
+
+/* ── Bootstrap all data ── */
+const identity    = loadIdentity();
+const uniInfo     = loadUniversityInfo();
+const students    = loadStudents();
+const projects    = loadProjects();
+const professors  = loadProfessors();
+const assistants  = loadAssistants();
+
+const collections   = { students, professors, assistants, projects };
+const entityRoutes  = [
+  ...professors.map(i => ({ ...i, type: 'professors' })),
+  ...assistants.map(i => ({ ...i, type: 'assistants' })),
+];
+
+/* ============================================================
+   ROUTER & THEME
+   ============================================================ */
+const DARK_PAGES = ['students', 'university'];
+let currentRoute = '/';
+
+function setTheme(section) {
+  document.body.classList.toggle('dark-page', DARK_PAGES.includes(section));
+}
+function navigate(path) { currentRoute = path; render(); window.scrollTo(0, 0); }
+
+/* ============================================================
+   UI HELPERS
+   ============================================================ */
+function qr(label = 'AED') {
+  const cells = Array.from({ length: 25 }, (_, i) => {
+    const f = [0,1,2,5,7,10,11,14,17,19,20,22,24].includes((i + label.length) % 25);
+    return `<span class="${f ? 'filled' : ''}"></span>`;
+  }).join('');
+  return `<div class="qr" aria-hidden="true">${cells}</div>`;
+}
+
+function initials(name) {
+  return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+}
+
+function archPhoto(src, alt, scale = 'normal') {
+  return `<div class="portrait portrait-${scale}">
+    <div class="arch-frame img-frame">
+      <img src="${src}" alt="${alt}" loading="lazy"
+           onerror="this.style.display='none';this.parentElement.innerHTML+='<span>${initials(alt)}</span>'"/>
+    </div>
+  </div>`;
+}
+
+function archInitials(inits, scale = 'normal') {
+  return `<div class="portrait portrait-${scale}"><div class="arch-frame"><span>${inits}</span></div></div>`;
+}
+
+function thumbImg(src, alt) {
+  return `<div class="project-thumb img-frame">
+    <img src="${src}" alt="${alt}" loading="lazy"
+         onerror="this.style.display='none';this.parentElement.innerHTML+='<span>${initials(alt)}</span>'"/>
+  </div>`;
+}
+
+function pageIntro(kicker, title, body) {
+  return `<section class="page-intro reveal">
+    <p class="kicker">${kicker}</p>
+    <h1>${title}</h1>
+    <p>${body}</p>
+  </section>`;
+}
+
+/* ============================================================
+   CARD BUILDERS
+   ============================================================ */
+function studentCard(s) {
+  const proj = projects.find(p => p.studentId === s.id);
+  return `<div class="id-card reveal" onclick="navigate('/students/${s.id}')">
+    ${archPhoto(s.photo, s.name)}
+    <div class="card-content">
+      <p class="role-label">Student</p>
+      <h2>${s.name}</h2>
+      <span class="tag-label">${s.code}</span>
+    </div>
+    <div class="card-footer">
+      <small>${s.projectName || (proj ? proj.title : 'Unassigned')}</small>
+      ${qr(s.name)}
+    </div>
+  </div>`;
+}
+
+function staffCard(person, type) {
+  return `<div class="id-card reveal" onclick="navigate('/${type}/${person.id}')">
+    <div class="card-code">${identity.code}</div>
+    ${archPhoto(person.photo, person.name)}
+    <div class="card-content">
+      <p class="role-label">${person.role}</p>
+      <h2>${person.name}</h2>
+      <span class="tag-label">${person.tag}</span>
+    </div>
+    <div class="card-footer"><small>${person.title}</small>${qr(person.name)}</div>
+  </div>`;
+}
+
+function projectCard(p) {
+  const stu = students.find(s => s.id === p.studentId);
+  return `<div class="project-card reveal" onclick="navigate('/projects/${p.id}')">
+    ${thumbImg(p.thumbnail, p.title)}
+    <div class="project-main">
+      <p class="kicker">AED-P-${String(p.id).padStart(3,'0')}</p>
+      <h2>${p.title}</h2>
+      <p>${p.description}</p>
+      <div class="meta-row">
+        <span>${stu ? stu.name : 'Unassigned'}</span>
+        <span>${p.supervisor}</span>
+      </div>
+    </div>
+    ${qr(p.title)}
+  </div>`;
+}
+
+/* ============================================================
+   LISTING PAGES
+   ============================================================ */
+function listing(type) {
+  const labels = {
+    students  : ['Student Registry','Graduating Candidates','31 graduating students across Architecture and Environmental Design — each card opens a full profile with linked project.'],
+    professors: ['Academic Registry','Professors','Formal academic profiles for program leadership, studio supervisors, and environmental design advisors.'],
+    assistants: ['Studio Registry','Teaching Assistants','A lighter identity hierarchy for the team supporting representation, fabrication, and research methods.'],
+    projects  : ['Portfolio Registry','Graduation Projects','31 graduation projects — each card opens a full project page with gallery, description, and linked student.'],
+  };
+  if (type === 'projects')
+    return `${pageIntro(...labels[type])}<section class="project-list">${projects.map(projectCard).join('')}</section>`;
+  if (type === 'students')
+    return `${pageIntro(...labels[type])}<section class="cards-grid">${students.map(s => studentCard(s)).join('')}</section>`;
+  return `${pageIntro(...labels[type])}<section class="cards-grid">${collections[type].map(p => staffCard(p, type)).join('')}</section>`;
+}
+
+/* ============================================================
+   DETAIL PAGES
+   ============================================================ */
+function studentDetail(s) {
+  const proj = projects.find(p => p.studentId === s.id);
+  return `<section class="detail-layout reveal">
+    <article class="expanded-id">
+      <div class="expanded-header">
+        <div>
+          <p class="kicker">Student Profile</p>
+          <h1>${s.name}</h1>
+          <span>${s.code}</span>
+        </div>
+        <span class="back-link" onclick="navigate('/students')">Back</span>
+      </div>
+      <div class="expanded-body">
+        ${archPhoto(s.photo, s.name, 'large')}
+        <div>
+          <!-- ── Core identity fields ── -->
+          <dl class="spec-list">
+            <div><dt>Student Code</dt><dd>${s.code}</dd></div>
+            <div><dt>Project</dt><dd>${s.projectName || (proj ? proj.title : 'Unassigned')}</dd></div>
+          </dl>
+
+          <!-- ── Contact info strip ── -->
+          <div class="contact-strip">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a class="contact-value" href="mailto:${s.email}">${s.email}</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <a class="contact-value" href="tel:${s.phone}">${s.phone}</a>
+            </div>
+          </div>
+
+          <!-- ── Linked project card ── -->
+          ${proj ? `
+          <div class="linked-project-card" onclick="navigate('/projects/${proj.id}')">
+            ${thumbImg(proj.thumbnail, proj.title)}
+            <div>
+              <p class="kicker">AED-P-${String(proj.id).padStart(3,'0')}</p>
+              <h3>${proj.title}</h3>
+              <p>${proj.description.slice(0,80)}…</p>
+            </div>
+          </div>
+          <button class="action-btn" onclick="event.stopPropagation();navigate('/projects/${proj.id}')">View Project</button>
+          ` : ''}
+        </div>
+      </div>
+    </article>
+    <aside class="backside-panel">
+      <p class="kicker">Identity Card — Back</p>
+      ${qr(s.code)}
+      <h2>${s.name}</h2>
+      <p>${s.code}</p>
+      <p style="margin-top:6px;font-size:0.8rem">${s.email}</p>
+      <p style="font-size:0.8rem">${s.phone}</p>
+      <div class="panel-pattern" aria-hidden="true"></div>
+    </aside>
+  </section>`;
+}
+
+function staffDetail(person) {
+  return `<section class="detail-layout reveal">
+    <article class="expanded-id">
+      <div class="expanded-header">
+        <div>
+          <p class="kicker">${person.role}</p>
+          <h1>${person.name}</h1>
+          <span>${person.title}</span>
+        </div>
+        <span class="back-link" onclick="navigate('/${person.type}')">Back</span>
+      </div>
+      <div class="expanded-body">
+        ${archPhoto(person.photo, person.name, 'large')}
+        <div>
+          <h2>${person.tag}</h2>
+          <p>${person.bio}</p>
+          <dl class="spec-list">
+            <div><dt>Email</dt><dd>${person.email}</dd></div>
+            <div><dt>Registry</dt><dd>${identity.code}</dd></div>
+          </dl>
+        </div>
+      </div>
+    </article>
+    <aside class="backside-panel">
+      <p class="kicker">Back Side Panel</p>
+      ${qr(person.name)}
+      <h2>${person.name}</h2>
+      <p>${person.email}</p>
+      <div class="panel-pattern" aria-hidden="true"></div>
+    </aside>
+  </section>`;
+}
+
+function projectDetail(p) {
+  const stu = students.find(s => s.id === p.studentId);
+  const imgs = p.images.length ? p.images : [p.thumbnail];
+  return `<section class="project-detail reveal">
+    <div class="project-hero">
+      <div>
+        <p class="kicker">AED-P-${String(p.id).padStart(3,'0')}</p>
+        <h1>${p.title}</h1>
+        <p>${p.description}</p>
+        <div class="meta-row">
+          <span>${stu ? stu.name : 'Unassigned'}</span>
+          <span>${p.supervisor}</span>
+        </div>
+      </div>
+      <div class="project-seal">${thumbImg(p.thumbnail, p.title)}${qr(p.title)}</div>
+    </div>
+    <section class="gallery-grid" aria-label="Project images">
+      ${imgs.map((src, i) => `
+      <figure class="gallery-tile">
+        <div class="img-frame">
+          <img src="${src}" alt="${p.title} — Image ${i+1}" loading="lazy"
+               onerror="this.parentElement.innerHTML='<span style=\\"color:var(--gold);font-size:2.6rem;font-weight:800;display:grid;place-items:center;height:200px\\">0${i+1}</span>'"/>
+        </div>
+        <figcaption>Image ${i+1}</figcaption>
+      </figure>`).join('')}
+    </section>
+    <div class="info-grid">
+      <div class="info-block">
+        <p class="kicker">Student Information</p>
+        ${stu ? `
+        <div class="linked-project-card" onclick="navigate('/students/${stu.id}')">
+          ${archPhoto(stu.photo, stu.name)}
+          <div>
+            <h3>${stu.name}</h3>
+            <p>${stu.program}</p>
+          </div>
+        </div>
+        <button class="action-btn" onclick="event.stopPropagation();navigate('/students/${stu.id}')">View Student</button>
+        ` : '<p>No student assigned.</p>'}
+      </div>
+      <div class="info-block">
+        <p class="kicker">Supervisor Information</p>
+        <p>${p.supervisor}</p>
+      </div>
+    </div>
+    <aside class="backside-panel project-backside">
+      <p class="kicker">Project Back Side Panel</p>
+      <h2>${p.title}</h2>
+      <p>${p.description}</p>
+      ${qr(p.title)}
+    </aside>
+  </section>`;
+}
+
+function universityPage() {
+  const u = uniInfo;
+  const sections = [
+    { title: 'About ' + u.name,     body: u.about       },
+    { title: u.faculty,              body: u.facultyDesc  },
+    { title: u.program,              body: u.programDesc  },
+  ];
+  const contactHtml = u.contact ? `
+  <div class="uni-contact-grid">
+    ${u.contact.email   ? `<div class="uni-contact-item"><span>Email</span>${u.contact.email}</div>` : ''}
+    ${u.contact.phone   ? `<div class="uni-contact-item"><span>Phone</span>${u.contact.phone}</div>` : ''}
+    ${u.contact.address ? `<div class="uni-contact-item"><span>Address</span>${u.contact.address}</div>` : ''}
+  </div>` : '';
+  const socialHtml = u.social ? `
+  <div class="uni-social-row">
+    ${u.social.website   ? `<a class="uni-social-link" href="${u.social.website}" target="_blank" rel="noopener">Website</a>` : ''}
+    ${u.social.facebook  ? `<a class="uni-social-link" href="${u.social.facebook}" target="_blank" rel="noopener">Facebook</a>` : ''}
+    ${u.social.instagram ? `<a class="uni-social-link" href="${u.social.instagram}" target="_blank" rel="noopener">Instagram</a>` : ''}
+    ${u.social.linkedin  ? `<a class="uni-social-link" href="${u.social.linkedin}" target="_blank" rel="noopener">LinkedIn</a>` : ''}
+  </div>` : '';
+  return `${pageIntro('Institutional Document','University Info','A complete institutional identity document for AED — edit each field in the university-info template block.')}
+  <section class="document-panel reveal">
+    <div class="document-header">
+      <div><p class="kicker">${identity.code}</p><h2>${u.name}</h2></div>
+      ${qr(u.name)}
+    </div>
+    ${sections.map(s => `<article><h3>${s.title}</h3><p>${s.body}</p></article>`).join('')}
+    ${contactHtml || socialHtml ? `<article>
+      <h3>Contact &amp; Connect</h3>
+      <div>${contactHtml}${socialHtml}</div>
+    </article>` : ''}
+  </section>`;
+}
+
+function homePage() {
+  const cards = [
+    ['Students',         'Candidate identity archive', 'students'],
+    ['Professors',       'Academic leadership',         'professors'],
+    ['Teaching Assistants','Studio support network',   'assistants'],
+    ['Graduation Projects','Portfolio index',           'projects'],
+    ['University Info',  'Institutional document',      'university'],
+  ];
+  return `<section class="hero reveal">
+    <div class="hero-bg"></div><div class="hero-lines"></div>
+    <div class="hero-copy">
+      <p class="kicker">${identity.faculty}</p>
+      <h1>${identity.program}</h1>
+      <p>${identity.cohort}</p>
+    </div>
+    <div class="hero-id">
+      <div class="institution-card">
+        <div><p class="kicker">Digital Identity System</p><h2>${identity.university}</h2></div>
+        ${qr(identity.code)}
+        <dl>
+          <div><dt>Program</dt><dd>AED</dd></div>
+          <div><dt>Cohort</dt><dd>2026</dd></div>
+          <div><dt>Archive</dt><dd>Graduation Projects</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+  <section class="navigation-grid">
+    ${cards.map(([t,txt,route],i) => `
+    <div class="nav-card reveal" style="--delay:${i*70}ms" onclick="navigate('/${route}')">
+      <span class="num">0${i+1}</span>
+      <h2>${t}</h2>
+      <p>${txt}</p>
+      <div class="nav-card-icon"></div>
+    </div>`).join('')}
+  </section>`;
+}
+
+function notFound() {
+  return `<section class="page-intro reveal">
+    <p class="kicker">Archive Notice</p>
+    <h1>Identity record not found</h1>
+    <p>The requested registry entry is not available in this showcase.</p>
+    <span class="back-link" onclick="navigate('/')">Return home</span>
+  </section>`;
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+function render() {
+  const app   = document.getElementById('app');
+  const parts = currentRoute.replace(/^\//, '').split('/').filter(Boolean);
+  const [section, id] = parts;
+  setTheme(section);
+  let html = '';
+  if (!section) {
+    html = homePage();
+  } else if (['students','professors','assistants','projects'].includes(section) && !id) {
+    html = listing(section);
+  } else if (section === 'students' && id) {
+    const s = students.find(i => String(i.id) === String(id));
+    html = s ? studentDetail(s) : notFound();
+  } else if (['professors','assistants'].includes(section) && id) {
+    const p = entityRoutes.find(i => i.type === section && i.id === id);
+    html = p ? staffDetail(p) : notFound();
+  } else if (section === 'projects' && id) {
+    const p = projects.find(i => String(i.id) === String(id));
+    html = p ? projectDetail(p) : notFound();
+  } else if (section === 'university') {
+    html = universityPage();
+  } else {
+    html = notFound();
+  }
+  app.innerHTML = html;
+  app.focus({ preventScroll: true });
+}
+
+render();
+
+</script>
+</body>
+</html>
