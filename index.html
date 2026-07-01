@@ -258,6 +258,42 @@ body.dark-page .contact-item{background:rgba(8,25,50,0.6);border-color:rgba(201,
 body.dark-page .contact-value{color:rgba(255,255,255,0.8)}
 body.dark-page .contact-value:hover{color:var(--gold-2)}
 
+
+/* PROJECT DESCRIPTION BLOCK */
+.project-detail-description{color:var(--navy-2);font-size:0.95rem;line-height:1.75}
+body.dark-page .project-detail-description{color:rgba(255,255,255,0.75)}
+
+
+/* PROJECT COVER IMAGE (thumbnail كبيرة في صفحة المشروع) */
+.project-cover-wrap{
+  width:100%;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--off-white);
+  aspect-ratio:16/7;
+}
+.project-cover-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* PROJECT SUBTITLE — جملة قصيرة تحت العنوان */
+.project-hero-subtitle{
+  color:var(--mist);
+  font-size:1.05rem;
+  line-height:1.6;
+  margin-bottom:6px;
+}
+.project-card-subtitle{
+  color:var(--mist);
+  font-size:0.88rem;
+  line-height:1.5;
+  margin-top:4px;
+}
+
 </style>
 </head>
 <body>
@@ -346,7 +382,7 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <data class="social-website">https://www.hnu.edu.eg</data>
     <data class="social-facebook">https://facebook.com/hnu.official</data>
     <data class="social-instagram">https://instagram.com/hnu.aed</data>
-    <data class="social-linkedin">https://linkedin.com/school/helwan-national-university</data>
+    <data class="social-linkedin">https://www.linkedin.com/school/helwannationalofficial/</data>
   </div>
 
 </template>
@@ -455,7 +491,7 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <p class="student-phone">+201122361011</p>
 
     <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
-    <p class="student-project-name">Project 3</p>
+    <p class="student-project-name">science and art cultural center</p>
 
   </div>
 
@@ -545,7 +581,7 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <p class="student-phone">+20 100 000 006</p>
 
     <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
-    <p class="student-project-name">Project 6</p>
+    <p class="student-project-name">Eco-healing resort</p>
 
   </div>
 
@@ -665,7 +701,7 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <p class="student-phone">+201061759235</p>
 
     <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
-    <p class="student-project-name">Project 10</p>
+    <p class="student-project-name">AYUR</p>
 
   </div>
 
@@ -709,7 +745,7 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- ① PHOTO  —  Replace the src path with the real image -->
     <img class="student-photo"
-         src="images/Aly El-din Hussien.jpg"
+         src="images/Aly El-din Hussien.JPG"
          alt="Student 12">
 
     <!-- ② NAME -->
@@ -889,7 +925,7 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- ① PHOTO  —  Replace the src path with the real image -->
     <img class="student-photo"
-         src="images/Mohamed Khalid.jpeg"
+         src="images/Mohamed Khalid.JPEG"
          alt="Student 18">
 
     <!-- ② NAME -->
@@ -1018,11 +1054,6 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- ③ STUDENT CODE  (University ID) -->
     <p class="student-code">923220051</p>
 
-    <!-- ④ EMAIL -->
-    <p class="student-email">.................</p>
-
-    <!-- ⑤ PHONE -->
-    <p class="student-phone">.................</p>
 
     <!-- ⑥ LINKED PROJECT NAME  (display label — routing uses data-project-id above) -->
     <p class="student-project-name">Project 22</p>
@@ -1039,7 +1070,7 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- ① PHOTO  —  Replace the src path with the real image -->
     <img class="student-photo"
-         src="images/Mariam Mohamed.jpg"
+         src="images/Mariam Mohamed.JPG"
          alt="Student 23">
 
     <!-- ② NAME -->
@@ -1304,9 +1335,10 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 <!-- ═══════════════════════════════════════════════════════════
      PROJECTS  —  Edit each project block independently.
      Each block has:
-       · title          · thumbnail
-       · description    · supervisor
-       · 3 gallery images (add more <img class="gallery-img"> as needed)
+       · title          · thumbnail (cover image — shown large at top of project page)
+       · subtitle       (class="project-subtitle" — جملة قصيرة تحت الاسم)
+       · description    (class="project-description" — فقرة الوصف في info block)
+       · 3 gallery images (add or remove <img> tags freely)
      ══════════════════════════════════════════════════════════ -->
 <template id="all-projects">
 
@@ -1322,6 +1354,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 1</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 1.</p>
@@ -1351,6 +1386,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 2</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 2.</p>
 
@@ -1373,23 +1411,28 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- THUMBNAIL (cover image shown on listing cards) -->
     <img  class="project-thumbnail"
-          src="/images/projects/project-3-cover.jpg"
+          src="images\projects\project 3\main shot - Ahmed Hany.jpg"
           alt="Project 3">
 
     <!-- TITLE -->
-    <h3>Project 3</h3>
+    <h3>science and art cultural center</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle">The project is inspired by the blue lotus and its roots and it's made like that to provide opportunity for different cultures to exchange their science and arts</p>
 
     <!-- DESCRIPTION -->
-    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 3.</p>
+    <p class="project-description">The goal of this project is to open opportunities for new businesses to be opened initialized by The exchange of knowledge  to expanding the quality of available professionals .
+
+this project contains three exhibition halls , a library and a theater and the environmental hall to provide opportunity to those who are interested in studying how to deal with climate change .</p>
 
     <!-- SUPERVISOR -->
     <p class="project-supervisor">Faculty Supervisor</p>
 
     <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
     <div class="project-gallery">
-      <img src="/images/projects/project-3-image-01.jpg" alt="Project 3 — Image 1">
-      <img src="/images/projects/project-3-image-02.jpg" alt="Project 3 — Image 2">
-      <img src="/images/projects/project-3-image-03.jpg" alt="Project 3 — Image 3">
+      <img src="images\projects\project 3\back shot - Ahmed Hany.jpg" alt="Project 3 — Image 1">
+      <img src="images\projects\project 3\solar - Ahmed Hany.jpg" alt="Project 3 — Image 2">
+      <img src="images\projects\project 3\5 - Ahmed Hany.jpg" alt="Project 3 — Image 3">
     </div>
 
   </div>
@@ -1406,6 +1449,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 4</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 4.</p>
@@ -1435,6 +1481,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 5</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 5.</p>
 
@@ -1457,23 +1506,27 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- THUMBNAIL (cover image shown on listing cards) -->
     <img  class="project-thumbnail"
-          src="/images/projects/project-6-cover.jpg"
+          src="images\projects\project 6\000 - Aya Rashwan.png"
           alt="Project 6">
 
     <!-- TITLE -->
-    <h3>Project 6</h3>
+    <h3>Eco-healing Resort</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle">Azul is a holistic healing retreat in Siwa Oasis that reconnects people with nature through therapeutic 
+      experiences, traditional architecture, and sustainable design</p>
 
     <!-- DESCRIPTION -->
-    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 6.</p>
+    <p class="project-description">Azul is a holistic healing retreat located in Siwa Oasis, designed to promote physical, mental, and spiritual well-being through an immersive architectural journey. Inspired by the oasis landscape and the wisdom of traditional Siwan architecture, the project integrates therapeutic spaces, eco-lodging, and restorative outdoor environments within a sustainable masterplan. Locally sourced materials such as Karshif, palm trunks, and woven khous reinforce the project's cultural identity while supporting passive environmental strategies. By balancing traditional construction techniques with contemporary wellness design, Azul creates a tranquil sanctuary where architecture, nature, and healing become one continuous experience.</p>
 
-    <!-- SUPERVISOR -->
-    <p class="project-supervisor">Faculty Supervisor</p>
 
     <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
     <div class="project-gallery">
-      <img src="/images/projects/project-6-image-01.jpg" alt="Project 6 — Image 1">
-      <img src="/images/projects/project-6-image-02.jpg" alt="Project 6 — Image 2">
-      <img src="/images/projects/project-6-image-03.jpg" alt="Project 6 — Image 3">
+      <img src="images\projects\project 6\PixVerse_Image_Effect_prompt_Transform this ar (9) - Aya Rashwan.png" alt="Project 6 — Image 2">
+      <img src="images\projects\project 6\PixVerse_Image_Effect_prompt_Transform this ar (10) - Aya Rashwan.png" alt="Project 6 — Image 3">
+      <img src="images\projects\project 6\PixVerse_Image_Effect_prompt_Transform this ar (8) - Aya Rashwan.png" alt="Project 6 — Image 4">
+      <img src="images\projects\project 6\PixVerse_Image_Effect_prompt_Transform this ar (5) - Aya Rashwan.png" alt="Project 6 — Image 5">
+      <img src="images\projects\project 6\PixVerse_Image_Effect_prompt_Transform this ar - Aya Rashwan.png" alt="Project 6 — Image 6">
     </div>
 
   </div>
@@ -1490,6 +1543,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 7</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 7.</p>
@@ -1519,6 +1575,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 8</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 8.</p>
 
@@ -1547,6 +1606,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 9</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 9.</p>
 
@@ -1569,23 +1631,27 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- THUMBNAIL (cover image shown on listing cards) -->
     <img  class="project-thumbnail"
-          src="/images/projects/project-10-cover.jpg"
+          src="images\projects\project 10\15 - Salma Reda.png"
           alt="Project 10">
 
     <!-- TITLE -->
-    <h3>Project 10</h3>
+    <h3>AYUR</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle">A place where architecture becomes a silent therapist, guiding people from emotional burden to inner peace through the healing power of nature.</p>
 
     <!-- DESCRIPTION -->
-    <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 10.</p>
-
-    <!-- SUPERVISOR -->
-    <p class="project-supervisor">Faculty Supervisor</p>
+    <p class="project-description">AYUR is an emotional healing park located in Siwa Oasis, where architecture becomes a catalyst for restoration rather than merely a physical shelter. Inspired by the timeless relationship between water and sand, the project transforms the landscape into a therapeutic journey that gently guides visitors toward reflection, emotional release, and inner balance. Through immersive sensory experiences, hydrotherapy and sand therapy, meditation and yoga spaces, healing gardens, art therapy workshops, and cultural experiences rooted in Siwan heritage, the park nurtures both mind and body. Every path, material, sound, and natural element is carefully orchestrated to reconnect people with nature, awaken the senses, and foster emotional well-being, allowing healing to unfold gradually through movement, memory, and meaningful experience.</p>
 
     <!-- GALLERY IMAGES  (add or remove <img> tags freely) -->
     <div class="project-gallery">
-      <img src="/images/projects/project-10-image-01.jpg" alt="Project 10 — Image 1">
-      <img src="/images/projects/project-10-image-02.jpg" alt="Project 10 — Image 2">
-      <img src="/images/projects/project-10-image-03.jpg" alt="Project 10 — Image 3">
+      <img src="images\projects\project 10\14 - Salma Reda.png" alt="Project 10 — Image 1">
+      <img src="images\projects\project 10\12 - Salma Reda.png" alt="Project 10 — Image 2">
+      <img src="images\projects\project 10\8 - Salma Reda.png" alt="Project 10 — Image 3">
+      <img src="images\projects\project 10\4 - Salma Reda.png" alt="Project 10 — Image 4">
+      <img src="images\projects\project 10\7 - Salma Reda.png" alt="Project 10 — Image 5">
+      <img src="images\projects\project 10\6 - Salma Reda.png" alt="Project 10 — Image 6">
+      <img src="images\projects\project 10\5 - Salma Reda.png" alt="Project 10 — Image 7">
     </div>
 
   </div>
@@ -1602,6 +1668,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 11</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 11.</p>
@@ -1631,6 +1700,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 12</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 12.</p>
 
@@ -1658,6 +1730,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 13</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 13.</p>
@@ -1687,6 +1762,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 14</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 14.</p>
 
@@ -1714,6 +1792,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 15</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 15.</p>
@@ -1743,6 +1824,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 16</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 16.</p>
 
@@ -1770,6 +1854,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 17</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 17.</p>
@@ -1799,6 +1886,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 18</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 18.</p>
 
@@ -1826,6 +1916,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 19</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 19.</p>
@@ -1855,6 +1948,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 20</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 20.</p>
 
@@ -1882,6 +1978,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 21</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 21.</p>
@@ -1911,6 +2010,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 22</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 22.</p>
 
@@ -1938,6 +2040,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 23</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 23.</p>
@@ -1967,6 +2072,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 24</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 24.</p>
 
@@ -1994,6 +2102,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 25</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 25.</p>
@@ -2023,6 +2134,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 26</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 26.</p>
 
@@ -2050,6 +2164,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 27</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 27.</p>
@@ -2079,6 +2196,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 28</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 28.</p>
 
@@ -2106,6 +2226,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
     <!-- TITLE -->
     <h3>Project 29</h3>
+
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
 
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 29.</p>
@@ -2135,6 +2258,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 30</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 30.</p>
 
@@ -2163,6 +2289,9 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <!-- TITLE -->
     <h3>Project 31</h3>
 
+    <!-- SUBTITLE — جملة قصيرة تظهر تحت الاسم في الكارد وصفحة المشروع -->
+    <p class="project-subtitle"></p>
+
     <!-- DESCRIPTION -->
     <p class="project-description">Graduation thesis project exploring architectural and environmental design strategies developed by Student 31.</p>
 
@@ -2187,26 +2316,20 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
 
   <!-- ──────────────────────────────────────── Professor 1 -->
   <div id="professor-1"
-       data-id="prof-amal-rashad">
+       data-id="Prof. Mohamed Emad Noureldin">
 
     <!-- PHOTO -->
-    <img  src="/images/professors/professor-1.jpg"
-          alt="Prof. Amal Rashad">
+    <img  src="images/Prof.Mohamed Emad.JPG"
+          alt="Prof. Mohamed Emad Noureldin">
 
     <!-- NAME -->
-    <h3>Prof. Amal Rashad</h3>
+    <h3>Prof. Mohamed Emad Noureldin</h3>
 
     <!-- TITLE / ROLE -->
-    <p class="professor-title">Program Chair</p>
-
-    <!-- SPECIALISATION TAG -->
-    <p class="professor-tag">Architectural Design</p>
+    <p class="professor-title">Chair of the Jury</p>
 
     <!-- EMAIL -->
-    <p class="professor-email">amal.rashad@hnu.edu.eg</p>
-
-    <!-- BIO -->
-    <p class="professor-bio">Leads AED's academic identity, design studio structure, and graduation review framework.</p>
+    <p class="professor-email">emadbileha@gmail.com</p>
 
   </div>
 
@@ -2288,6 +2411,40 @@ body.dark-page .contact-value:hover{color:var(--gold-2)}
     <p class="ta-email">arch.nourhan.tarek.saeeed@gmail.com</p>
   </div>
 
+   <!-- ──────────────────────────────────────── TA 4 -->
+  <div id="ta-4"
+       data-id="ta-lamis-sami">
+
+    <img  src="images/Lamis Sami.png"
+          alt="Lamis Sami">
+    <h3>Lamis Sami</h3>
+    <p class="ta-title">Teaching Assistant</p>
+    <p class="ta-email">lamissamyyy@gmail.com</p>
+  </div>
+
+   <!-- ──────────────────────────────────────── TA 5 -->
+  <div id="ta-5"
+       data-id="ta-shereen-nabil">
+
+    <img  src="images/Shereen Nabil.jpeg"
+          alt="Shereen Nabil">
+    <h3>Shereen Nabil </h3>
+    <p class="ta-title">Teaching Assistant</p>
+    <p class="ta-email">Cherriinabile@gmail.com
+</p>
+  </div>
+
+  <!-- ──────────────────────────────────────── TA 6 -->
+  <div id="ta-6"
+       data-id="ta-muhammad-qamr">
+
+    <img  src="images/Muhammad Qamr.jpeg"
+          alt="Muhammad Qamr">
+    <h3>Muhammad Qamr </h3>
+    <p class="ta-title">Teaching Assistant</p>
+    <p class="ta-email">muhammad.sobhy.qamr@gmail.com
+</p>
+  </div>
 </template>
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -2400,6 +2557,7 @@ function loadProjects() {
     studentId   : parseInt(el.dataset.studentId),
     title       : el.querySelector('h3').textContent.trim(),
     thumbnail   : el.querySelector('.project-thumbnail').getAttribute('src'),
+    subtitle    : el.querySelector('.project-subtitle')?.textContent.trim()    || '',
     description : el.querySelector('.project-description')?.textContent.trim() || '',
     supervisor  : el.querySelector('.project-supervisor')?.textContent.trim()  || '',
     images      : [...el.querySelectorAll('.project-gallery img')].map(i => i.getAttribute('src')),
@@ -2545,10 +2703,9 @@ function projectCard(p) {
     <div class="project-main">
       <p class="kicker">AED-P-${String(p.id).padStart(3,'0')}</p>
       <h2>${p.title}</h2>
-      <p>${p.description}</p>
+      ${p.subtitle ? `<p class="project-card-subtitle">${p.subtitle}</p>` : ''}
       <div class="meta-row">
         <span>${stu ? stu.name : 'Unassigned'}</span>
-        <span>${p.supervisor}</span>
       </div>
     </div>
     ${qr(p.title)}
@@ -2577,7 +2734,7 @@ function listing(type) {
    ============================================================ */
 function studentDetail(s) {
   const proj = projects.find(p => p.studentId === s.id);
-  return `<section class="detail-layout reveal">
+  return `<section class="detail-layout reveal" style="grid-template-columns:1fr">
     <article class="expanded-id">
       <div class="expanded-header">
         <div>
@@ -2623,20 +2780,11 @@ function studentDetail(s) {
         </div>
       </div>
     </article>
-    <aside class="backside-panel">
-      <p class="kicker">Identity Card — Back</p>
-      ${qr(s.code)}
-      <h2>${s.name}</h2>
-      <p>${s.code}</p>
-      <p style="margin-top:6px;font-size:0.8rem">${s.email}</p>
-      <p style="font-size:0.8rem">${s.phone}</p>
-      <div class="panel-pattern" aria-hidden="true"></div>
-    </aside>
   </section>`;
 }
 
 function staffDetail(person) {
-  return `<section class="detail-layout reveal">
+  return `<section class="detail-layout reveal" style="grid-template-columns:1fr">
     <article class="expanded-id">
       <div class="expanded-header">
         <div>
@@ -2658,13 +2806,6 @@ function staffDetail(person) {
         </div>
       </div>
     </article>
-    <aside class="backside-panel">
-      <p class="kicker">Back Side Panel</p>
-      ${qr(person.name)}
-      <h2>${person.name}</h2>
-      <p>${person.email}</p>
-      <div class="panel-pattern" aria-hidden="true"></div>
-    </aside>
   </section>`;
 }
 
@@ -2676,10 +2817,9 @@ function projectDetail(p) {
       <div>
         <p class="kicker">AED-P-${String(p.id).padStart(3,'0')}</p>
         <h1>${p.title}</h1>
-        <p>${p.description}</p>
+        ${p.subtitle ? `<p class="project-hero-subtitle">${p.subtitle}</p>` : ''}
         <div class="meta-row">
           <span>${stu ? stu.name : 'Unassigned'}</span>
-          <span>${p.supervisor}</span>
         </div>
       </div>
       <div class="project-seal">${thumbImg(p.thumbnail, p.title)}${qr(p.title)}</div>
@@ -2702,23 +2842,16 @@ function projectDetail(p) {
           ${archPhoto(stu.photo, stu.name)}
           <div>
             <h3>${stu.name}</h3>
-            <p>${stu.program}</p>
           </div>
         </div>
         <button class="action-btn" onclick="event.stopPropagation();navigate('/students/${stu.id}')">View Student</button>
         ` : '<p>No student assigned.</p>'}
       </div>
       <div class="info-block">
-        <p class="kicker">Supervisor Information</p>
-        <p>${p.supervisor}</p>
+        <p class="kicker">Project Description</p>
+        <p class="project-detail-description">${p.description}</p>
       </div>
     </div>
-    <aside class="backside-panel project-backside">
-      <p class="kicker">Project Back Side Panel</p>
-      <h2>${p.title}</h2>
-      <p>${p.description}</p>
-      ${qr(p.title)}
-    </aside>
   </section>`;
 }
 
